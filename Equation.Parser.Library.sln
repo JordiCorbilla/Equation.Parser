@@ -3,9 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equation.Parser.Library", "Equation.Parser.Library.csproj", "{B8D73DFD-FC12-4548-9260-02D8CB3B4C5C}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equation.Parser.Library", "Equation.Parser.Library\Equation.Parser.Library.csproj", "{B8D73DFD-FC12-4548-9260-02D8CB3B4C5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equation.Parser.Tests", "..\Equation.Parser.Tests\Equation.Parser.Tests.csproj", "{8D3615F1-DF23-45B6-B95D-8CCD1E226245}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equation.Parser.Tests", "Equation.Parser.Tests\Equation.Parser.Tests.csproj", "{8D3615F1-DF23-45B6-B95D-8CCD1E226245}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
