@@ -189,7 +189,7 @@ namespace Equation.Parser.Library
                     {
                         case "+":
                         case "-":
-                            left = -1;
+                            left = double.NaN;
                             break;
                         case "*":
                             mulFound = true;

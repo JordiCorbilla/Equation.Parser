@@ -3,9 +3,11 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 16
 VisualStudioVersion = 16.0.30709.132
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equation.Parser.Library", "Equation.Parser.Library\Equation.Parser.Library.csproj", "{B8D73DFD-FC12-4548-9260-02D8CB3B4C5C}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Equation.Parser.Library", "Equation.Parser.Library\Equation.Parser.Library.csproj", "{B8D73DFD-FC12-4548-9260-02D8CB3B4C5C}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equation.Parser.Tests", "Equation.Parser.Tests\Equation.Parser.Tests.csproj", "{8D3615F1-DF23-45B6-B95D-8CCD1E226245}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Equation.Parser.Tests", "Equation.Parser.Tests\Equation.Parser.Tests.csproj", "{8D3615F1-DF23-45B6-B95D-8CCD1E226245}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Equation.Parser.Runner", "Equation.Parser.Runner\Equation.Parser.Runner.csproj", "{D1B317EF-E05A-47E7-9F15-12CA31501C87}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -21,6 +23,10 @@ Global
 		{8D3615F1-DF23-45B6-B95D-8CCD1E226245}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{8D3615F1-DF23-45B6-B95D-8CCD1E226245}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{8D3615F1-DF23-45B6-B95D-8CCD1E226245}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D1B317EF-E05A-47E7-9F15-12CA31501C87}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D1B317EF-E05A-47E7-9F15-12CA31501C87}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D1B317EF-E05A-47E7-9F15-12CA31501C87}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D1B317EF-E05A-47E7-9F15-12CA31501C87}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
