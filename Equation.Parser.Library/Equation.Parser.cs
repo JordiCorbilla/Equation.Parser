@@ -150,7 +150,7 @@ namespace Equation.Parser.Library
             //1 * 2 + 3
             var resolve = equation;
 
-            while (resolve.Contains("*")|| resolve.Contains("/"))
+            while (resolve.Contains("*") || resolve.Contains("/"))
             {
                 var numbers = resolve.Split(" ");
                 double left = double.NaN;
