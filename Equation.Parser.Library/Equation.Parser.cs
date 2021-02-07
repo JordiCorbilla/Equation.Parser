@@ -21,6 +21,7 @@
 //SOFTWARE.
 
 using System.Collections.Generic;
+using System.Globalization;
 
 namespace Equation.Parser.Library
 {
@@ -38,7 +39,7 @@ namespace Equation.Parser.Library
             _equationsSolutionCache = new Dictionary<string, double>();
             _operationCache = new Dictionary<string, double>();
         }
-
+        
         public double ParseEquation(string equation)
         {
             var resolve = "";
@@ -80,7 +81,7 @@ namespace Equation.Parser.Library
                 foreach (var (key, value) in _equationsSolutionCache)
                 {
                     var replace = $"({key})";
-                    processing = processing.Replace(replace, value.ToString());
+                    processing = processing.Replace(replace, value.ToString(CultureInfo.InvariantCulture));
                 }
 
                 _equationsSolutionCache.Clear();
@@ -152,14 +153,14 @@ namespace Equation.Parser.Library
             while (resolve.Contains("*")|| resolve.Contains("/"))
             {
                 var numbers = resolve.Split(" ");
-                double left = -1;
-                double right = -1;
+                double left = double.NaN;
+                double right = double.NaN;
                 var mulFound = false;
                 var divFound = false;
 
                 foreach (var t in numbers)
                 {
-                    if (mulFound && right == -1 && t != "+" && t != "*" && t != "-" && t != "/")
+                    if (mulFound && double.IsNaN(right) && t != "+" && t != "*" && t != "-" && t != "/")
                     {
                         right = double.Parse(t);
 
@@ -170,7 +171,7 @@ namespace Equation.Parser.Library
                         }
                     }
 
-                    if (divFound && right == -1 && t != "+" && t != "*" && t != "-" && t != "/")
+                    if (divFound && double.IsNaN(right) && t != "+" && t != "*" && t != "-" && t != "/")
                     {
                         right = double.Parse(t);
 
@@ -181,7 +182,7 @@ namespace Equation.Parser.Library
                         }
                     }
 
-                    if (left == -1 && t != "+" && t != "*" && t != "-" && t != "/")
+                    if (double.IsNaN(left) && t != "+" && t != "*" && t != "-" && t != "/")
                         left = double.Parse(t);
 
                     switch (t)
@@ -202,7 +203,7 @@ namespace Equation.Parser.Library
                 foreach (var (key, value) in _operationCache)
                 {
                     var replace = $"{key}";
-                    resolve = resolve.Replace(replace, value.ToString());
+                    resolve = resolve.Replace(replace, value.ToString(CultureInfo.InvariantCulture));
                     if (!resolve.Contains("*") && !resolve.Contains("/"))
                         break;
                 }
