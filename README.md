@@ -23,3 +23,9 @@ There are several test cases that cover common scenarions that can be used with 
 [TestCase("3 / 2 / 2 * 6 * 6 - 9", 18)]
 [TestCase("(1 - 3) / (6 - 7) * 100", 200)]
 ```
+
+## Installation
+
+```bash
+dotnet add package Equation.Parser.Library --version 1.1.0
+```
