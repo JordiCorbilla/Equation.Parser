@@ -2,7 +2,7 @@
 
 .net 5 Simple string Equation parser in .net 5 using the following rules
 
-- Parsing multiple pharentesis 4 + (5 - 4)
+- Parsing multiple pharentesis 4 + (5 - ( 4 + 6))
 - Multiplication and division are performed before addition or substraction 4 + (9 * 5) + (4 / 2)
   - Given the following equation: `(54 * 210 + 6) / 2 + 4 * 2`, the process is as follows:
   - (54 * 210 + 6) / 2 + 4 * 2 = (11340 + 6) / 2 + 4 * 2
